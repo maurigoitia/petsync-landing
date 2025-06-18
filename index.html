@@ -19,9 +19,9 @@
         .paw-icon {
             display: inline-block;
             transform: rotate(-15deg);
-            font-size: 1.1em; 
+            font-size: 1.1em;
             margin-right: 0.2em;
-            vertical-align: middle; 
+            vertical-align: middle;
         }
         .benefit-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -31,28 +31,28 @@
             box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.15);
         }
         .icon-placeholder, .logo-placeholder-about {
-            width: 50px; 
-            height: 50px; 
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            margin-bottom: 1rem; 
+            margin-bottom: 1rem;
         }
         .logo-placeholder-about {
-            width: auto; /* Ajustado para que el contenido defina el ancho */
+            width: auto;
             height: 70px;
-            padding-left: 1rem; /* Espacio para el ícono */
-            padding-right: 1rem; /* Espacio para el texto */
+            padding-left: 1rem;
+            padding-right: 1rem;
             border-radius: 12px;
             margin-left: auto;
             margin-right: auto;
-            display: inline-flex; /* Para que se ajuste al contenido */
+            display: inline-flex;
             align-items: center;
         }
-        .logo-placeholder-about .paw-icon-about { /* Ícono específico para "Quiénes Somos" y Footer */
-            font-size: 2rem; 
-            transform: rotate(-15deg); 
+        .logo-placeholder-about .paw-icon-about {
+            font-size: 2rem;
+            transform: rotate(-15deg);
             margin-right: 0.5rem;
         }
         .step-item svg {
@@ -60,16 +60,16 @@
         }
         /* Estilos para el acordeón de FAQ */
         .faq-item details > summary {
-            list-style: none; 
+            list-style: none;
             cursor: pointer;
             font-weight: 600;
             padding: 1rem;
             border-bottom: 1px solid #e5e7eb; /* gray-200 */
         }
         .faq-item details > summary::-webkit-details-marker {
-            display: none; 
+            display: none;
         }
-        .faq-item details > summary::after { 
+        .faq-item details > summary::after {
             content: '+';
             float: right;
             font-size: 1.5rem;
@@ -80,39 +80,35 @@
             transform: rotate(45deg);
         }
         .faq-item details div {
-            padding: 1rem; /* Padding por defecto para el contenido del details */
+            padding: 1rem;
         }
-         .faq-item details div.p-6 { /* Asegura que el padding específico se aplique si es necesario */
-            padding: 1.5rem; /* p-6 de Tailwind */
+        .faq-item details div.p-6 {
+            padding: 1.5rem;
         }
-
-
         /* Estilos para íconos de redes sociales en el footer */
         .social-icon {
             display: inline-block;
-            padding: 0.5rem; 
+            padding: 0.5rem;
             transition: color 0.3s ease;
         }
         .social-icon svg {
             width: 1.5rem; /* 24px */
             height: 1.5rem; /* 24px */
         }
-
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- SECCIÓN HERO -->
-    <section class="hero-bg text-white min-h-screen flex items-center justify-center p-6 md:p-12">
+    <section class="hero-bg text-white min-h-screen flex items-center justify-center p-6 md:p-12 lg:py-32">
         <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
             <div class="text-center md:text-left">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                     <span class="paw-icon">🐾</span>PetSync: El cuidado de tu mascota, simple y conectado.
                 </h1>
-                <p class="text-lg sm:text-xl mb-8 text-blue-100">
+                <p class="text-lg sm:text-xl mb-8 text-blue-100 max-w-xl md:max-w-none mx-auto md:mx-0">
                     Conectamos tutores y veterinarias para una gestión de salud integral. Encontrá servicios, agendá turnos, accedé a historiales médicos y más, ¡todo en un solo lugar!
                 </p>
-                <a href="#waitlist" class="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition duration-300 inline-block">
+                <a href="#waitlist" class="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition duration-300 inline-block hover:scale-105">
                     Sumate a la Waitlist
                 </a>
             </div>
@@ -139,7 +135,7 @@
                             <p class="font-medium text-sm text-gray-600">Diagnóstico Reciente:</p>
                             <p class="text-base">Alergia leve. Dieta especial.</p>
                         </div>
-                         <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition duration-300 text-sm">
+                        <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition duration-300 text-sm hover:scale-[1.02]">
                             Ver historial completo
                         </button>
                     </div>
@@ -148,8 +144,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: BENEFICIOS PARA TUTORES -->
-    <section id="beneficios-tutores" class="py-16 md:py-24 bg-white">
+    <section id="beneficios-tutores" class="py-16 md:py-24 lg:py-32 bg-white">
         <div class="container mx-auto max-w-6xl px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">
                 Beneficios para <span class="text-blue-600">Tutores</span>
@@ -171,9 +166,9 @@
                 </div>
                 <div class="benefit-card bg-gray-50 p-6 rounded-xl shadow-lg text-center border border-gray-200">
                     <div class="icon-placeholder bg-green-100 text-green-600 mx-auto">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4s-1.79 4-4 4c-1.742 0-3.223-.835-3.772-2M9 12H4m12 0h-5m-7 0H3.262M10.976 19h-2.952M15 19H9.25M9 12l2.25-3M15 12l-2.25-3M9 12l2.25 3M15 12l-2.25 3M6.31 16.975A6.965 6.965 0 005.5 15.25a6.999 6.999 0 005.25-10.5A6.999 6.999 0 0013.25 9M17.69 16.975A6.965 6.965 0 0118.5 15.25a6.999 6.999 0 01-5.25-10.5A6.999 6.999 0 0110.75 9" />
-                        </svg>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4s-1.79 4-4 4c-1.742 0-3.223-.835-3.772-2M9 12H4m12 0h-5m-7 0H3.262M10.976 19h-2.952M15 19H9.25M9 12l2.25-3M15 12l-2.25-3M9 12l2.25 3M15 12l-2.25 3M6.31 16.975A6.965 6.965 0 005.5 15.25a6.999 6.999 0 005.25-10.5A6.999 6.999 0 0013.25 9M17.69 16.975A6.965 6.965 0 0118.5 15.25a6.999 6.999 0 01-5.25-10.5A6.999 6.999 0 0110.75 9" />
+                           </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Inteligencia Artificial a tu Servicio <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full align-middle ml-1">Próximamente</span></h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
@@ -195,8 +190,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: BENEFICIOS PARA VETERINARIAS -->
-    <section id="beneficios-veterinarias" class="py-16 md:py-24 bg-gray-100">
+    <section id="beneficios-veterinarias" class="py-16 md:py-24 lg:py-32 bg-gray-100">
         <div class="container mx-auto max-w-6xl px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">
                 Beneficios para <span class="text-green-600">Veterinarias</span>
@@ -218,9 +212,9 @@
                 </div>
                 <div class="benefit-card bg-white p-6 rounded-xl shadow-lg text-center border border-gray-200">
                     <div class="icon-placeholder bg-pink-100 text-pink-600 mx-auto">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                           </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Conexión Directa, Pacientes Felices</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
@@ -230,8 +224,8 @@
                 <div class="benefit-card bg-white p-6 rounded-xl shadow-lg text-center border border-gray-200">
                     <div class="icon-placeholder bg-teal-100 text-teal-600 mx-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Ampliá tu Comunidad y Servicios</h3>
@@ -243,14 +237,12 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: ¿CÓMO FUNCIONA? -->
-    <section id="como-funciona" class="py-16 md:py-24 bg-white">
+    <section id="como-funciona" class="py-16 md:py-24 lg:py-32 bg-white">
         <div class="container mx-auto max-w-6xl px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12 md:mb-16">
                 ¿Cómo Funciona <span class="text-blue-600">PetSync</span>?
             </h2>
             <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-                <!-- Sub-sección Para Tutores -->
                 <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">
                         Para <span class="text-blue-500">Tutores</span>: El Cuidado de tu Mascota, Simplificado
@@ -281,10 +273,9 @@
                             <span class="text-gray-700">Gestioná <strong>citas y recibí recordatorios</strong> importantes.</span>
                         </li>
                     </ul>
-                    <p class="text-center text-xl font-medium text-gray-800 mt-8 mb-0">¡Así de fácil!</p> 
+                    <p class="text-center text-xl font-medium text-gray-800 mt-8 mb-0">¡Así de fácil!</p>
                 </div>
 
-                <!-- Sub-sección Para Veterinarias -->
                 <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">
                         Para <span class="text-green-500">Veterinarias</span>: Potenciá tu Clínica, Conectá con Pacientes
@@ -315,19 +306,18 @@
                             <span class="text-gray-700">Gestioná <strong>turnos y enviá comunicados</strong> importantes.</span>
                         </li>
                     </ul>
-                     <p class="text-center text-xl font-medium text-gray-800 mt-8 mb-0">¡Así de fácil!</p> 
+                    <p class="text-center text-xl font-medium text-gray-800 mt-8 mb-0">¡Así de fácil!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: QUIÉNES SOMOS -->
-    <section id="quienes-somos" class="py-16 md:py-24 bg-gray-100">
+    <section id="quienes-somos" class="py-16 md:py-24 lg:py-32 bg-gray-100">
         <div class="container mx-auto max-w-4xl px-6 text-center">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8">
                 Quiénes <span class="text-blue-600">Somos</span>
             </h2>
-            
+
             <div class="logo-placeholder-about bg-blue-500 text-white mx-auto mb-8 p-3">
                 <span class="paw-icon-about">🐾</span>
                 <span class="text-2xl font-semibold">PetSync</span>
@@ -336,10 +326,10 @@
             <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-3xl mx-auto">
                 En PetSync, desarrollamos una plataforma móvil pensada para tutores y clínicas veterinarias, convencidos de que el cuidado de las mascotas puede ser más simple y eficiente para todos. Organizamos turnos, centralizamos historiales clínicos y facilitamos el acceso a productos esenciales, todo desde tu celular.
             </p>
-            <p class="text-xl font-semibold text-gray-800 mb-4"> <!-- Reducido margen inferior -->
+            <p class="text-xl font-semibold text-gray-800 mb-4">
                 "Conectamos ambos lados del mostrador, <span class="text-blue-600">una patita a la vez</span>."
             </p>
-            <p class="mt-4 text-lg text-gray-700 mb-8"> <!-- Añadido margen inferior y ajustado estilo -->
+            <p class="mt-4 text-lg text-gray-700 mb-8">
                 Estamos construyendo la plataforma líder en cuidado conectado para mascotas en Buenos Aires. ¡Sumate y sé parte de esta evolución!
             </p>
             <p class="text-lg text-gray-600 italic max-w-2xl mx-auto">
@@ -348,8 +338,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: LLAMADA A LA ACCIÓN (BETA / WAITLIST) -->
-    <section id="waitlist" class="py-16 md:py-24 bg-blue-600 text-white">
+    <section id="waitlist" class="py-16 md:py-24 lg:py-32 bg-blue-600 text-white">
         <div class="container mx-auto max-w-3xl px-6 text-center">
             <h2 class="text-3xl sm:text-4xl font-bold mb-4">¡Estamos en versión beta!</h2>
             <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -373,15 +362,14 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300">
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300 hover:scale-[1.02]">
                     Quiero ser de los primeros
                 </button>
             </form>
         </div>
     </section>
 
-    <!-- SECCIÓN: PREGUNTAS FRECUENTES (FAQ) -->
-    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+    <section id="faq" class="py-16 md:py-24 lg:py-32 bg-gray-50">
         <div class="container mx-auto max-w-3xl px-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
                 Preguntas <span class="text-blue-600">Frecuentes</span>
@@ -390,7 +378,7 @@
                 <div class="faq-item bg-white rounded-lg shadow-md">
                     <details>
                         <summary>¿Qué es PetSync y cómo puede ayudarme?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> 
+                        <div class="text-gray-600 leading-relaxed p-6">
                             PetSync es una plataforma móvil que conecta a tutores de mascotas con clínicas veterinarias. Simplifica la gestión del cuidado de tu mascota permitiéndote agendar turnos, acceder a historiales médicos centralizados, recibir recordatorios y mucho más, todo desde tu celular. Para las veterinarias, optimiza la agenda, reduce la carga administrativa y mejora la comunicación con los clientes.
                         </div>
                     </details>
@@ -398,15 +386,15 @@
                 <div class="faq-item bg-white rounded-lg shadow-md">
                     <details>
                         <summary>¿Cómo me registro en PetSync?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> 
+                        <div class="text-gray-600 leading-relaxed p-6">
                             Actualmente estamos en versión beta. Dejanos tu contacto en nuestra waitlist (un poco más arriba en esta página) y te avisaremos tan pronto como puedas registrarte para ser de los primeros en probar PetSync.
                         </div>
                     </details>
                 </div>
-                 <div class="faq-item bg-white rounded-lg shadow-md">
+                   <div class="faq-item bg-white rounded-lg shadow-md">
                     <details>
                         <summary>¿PetSync tiene costo para los tutores de mascotas?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> 
+                        <div class="text-gray-600 leading-relaxed p-6">
                             Estamos definiendo los detalles finales, pero nuestro objetivo es que la versión básica de PetSync para tutores sea gratuita, ofreciendo todas las funcionalidades esenciales para el cuidado de sus mascotas. Podrían existir funciones premium opcionales en el futuro.
                         </div>
                     </details>
@@ -414,15 +402,15 @@
                 <div class="faq-item bg-white rounded-lg shadow-md">
                     <details>
                         <summary>¿Para quiénes está pensado PetSync?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> 
+                        <div class="text-gray-600 leading-relaxed p-6">
                            PetSync está pensado principalmente para tutores de mascotas urbanos, de entre 25 y 40 años, y para clínicas veterinarias y profesionales independientes en Buenos Aires que buscan optimizar su gestión y ofrecer un servicio más conectado y moderno a sus pacientes.
                         </div>
                     </details>
                 </div>
-                 <div class="faq-item bg-white rounded-lg shadow-md">
+                   <div class="faq-item bg-white rounded-lg shadow-md">
                     <details>
                         <summary>Soy veterinario independiente, ¿PetSync me sirve?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> 
+                        <div class="text-gray-600 leading-relaxed p-6">
                            ¡Claro que sí! PetSync está diseñado para adaptarse tanto a clínicas veterinarias con varios profesionales como a veterinarios independientes. Te ayudará a organizar tu agenda, mantener historiales digitalizados y comunicarte eficientemente con los tutores de tus pacientes.
                         </div>
                     </details>
@@ -431,11 +419,9 @@
         </div>
     </section>
 
-    <!-- FOOTER (PIE DE PÁGINA) -->
     <footer class="bg-gray-800 text-gray-400 py-8">
         <div class="container mx-auto max-w-6xl px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <!-- Logo y Copyright -->
                 <div class="text-center md:text-left mb-4 md:mb-0">
                     <div class="inline-flex items-center text-white mb-2">
                         <span class="paw-icon-about text-xl">🐾</span>
@@ -444,7 +430,6 @@
                     <p class="text-xs">&copy; 2025 PetSync. Todos los derechos reservados.</p>
                 </div>
 
-                <!-- Enlaces Legales y de Contacto -->
                 <div class="text-center md:text-left mb-4 md:mb-0">
                     <a href="#" class="text-xs hover:text-white px-2 py-1">Contacto</a>
                     <span class="text-xs">|</span>
@@ -452,8 +437,7 @@
                     <span class="text-xs">|</span>
                     <a href="#" class="text-xs hover:text-white px-2 py-1">Política de Privacidad</a>
                 </div>
-                
-                <!-- Redes Sociales -->
+
                 <div class="flex space-x-3">
                     <a href="#" aria-label="Instagram de PetSync" class="social-icon text-gray-400 hover:text-pink-500">
                         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -471,18 +455,64 @@
     </footer>
 
     <script>
-        // Script para el acordeón de FAQ (opcional, mejora la UX si quieres cerrar otros al abrir uno)
-        // document.querySelectorAll('.faq-item details').forEach((detail) => {
-        //     detail.addEventListener('toggle', function(event) {
-        //         if (this.open) {
-        //             document.querySelectorAll('.faq-item details').forEach((otherDetail) => {
-        //                 if (otherDetail !== this && otherDetail.open) {
-        //                     otherDetail.removeAttribute('open');
-        //                 }
-        //             });
-        //         }
-        //     });
-        // });
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // FAQ Accordion: Closes other details when one is opened
+        document.querySelectorAll('.faq-item details').forEach((detail) => {
+            detail.addEventListener('toggle', function(event) {
+                if (this.open) {
+                    document.querySelectorAll('.faq-item details').forEach((otherDetail) => {
+                        if (otherDetail !== this && otherDetail.open) {
+                            otherDetail.removeAttribute('open');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Basic client-side form validation for the Waitlist
+        document.addEventListener('DOMContentLoaded', () => {
+            const waitlistForm = document.querySelector('#waitlist form');
+            if (waitlistForm) {
+                waitlistForm.addEventListener('submit', function(event) {
+                    const emailInput = document.getElementById('email_waitlist');
+                    const tutorCheckbox = document.getElementById('tutor_checkbox');
+                    const vetCheckbox = document.getElementById('vet_checkbox');
+
+                    if (!emailInput.value) {
+                        alert('Por favor, ingresa tu correo electrónico.');
+                        event.preventDefault(); // Stop form submission
+                        return;
+                    }
+
+                    // Basic email format check
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(emailInput.value)) {
+                        alert('Por favor, ingresa un correo electrónico válido.');
+                        event.preventDefault();
+                        return;
+                    }
+
+                    if (!tutorCheckbox.checked && !vetCheckbox.checked) {
+                        alert('Por favor, selecciona si eres Tutor de mascota o Veterinario/a.');
+                        event.preventDefault();
+                        return;
+                    }
+
+                    // Optional: You might want to remove this alert if the Google Form redirection is immediate and handles feedback.
+                    // alert('¡Gracias por unirte a la waitlist de PetSync! Serás redirigido para completar el registro si es necesario.');
+                    // The form's action will handle the redirection after this.
+                });
+            }
+        });
     </script>
 </body>
 </html>
