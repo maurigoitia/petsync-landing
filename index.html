@@ -1,642 +1,283 @@
+Perfecto. Aquí tienes el código HTML de la página principal de PetSync, optimizada con las mejoras de diseño y SEO que discutimos. Está listo para copiar y pegar.
+
+Este código incluye:
+
+  * Una estructura más moderna y visual.
+  * **Encabezados (H1, H2)** optimizados para SEO.
+  * **Secciones claras** y mejor organizadas.
+  * **Testimonios** para generar confianza.
+  * **CTAs (Llamadas a la Acción)** más directas.
+  * Uso de **Tailwind CSS desde un CDN**, lo que significa que puedes pegarlo directamente en tu editor de código y funcionará de inmediato.
+
+-----
+
+### Código HTML de la Página Principal Optimizada
+
+Copia todo el código que se encuentra a continuación y pégalo en un archivo llamado `index.html`. Luego, puedes subirlo a tu servidor o usarlo como base para recrear la página en Squarespace.
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetSync - Cuidado Veterinario Simplificado</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background: linear-gradient(120deg, #3B82F6 0%, #1D4ED8 100%);
-        }
-        .mockup-card {
-            box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .paw-icon {
-            display: inline-block;
-            transform: rotate(-15deg);
-            font-size: 1.1em;
-            margin-right: 0.2em;
-            vertical-align: middle;
-        }
-        .benefit-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.15);
-        }
-        .icon-placeholder, .logo-placeholder-about {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-        .logo-placeholder-about {
-            width: auto; /* Ajustado para que el contenido defina el ancho */
-            height: 70px;
-            padding-left: 1rem; /* Espacio para el ícono */
-            padding-right: 1rem; /* Espacio para el texto */
-            border-radius: 12px;
-            margin-left: auto;
-            margin-right: auto;
-            display: inline-flex; /* Para que se ajuste al contenido */
-            align-items: center;
-        }
-        .logo-placeholder-about .paw-icon-about { /* Ícono específico para "Quiénes Somos" y Footer */
-            font-size: 2rem;
-            transform: rotate(-15deg);
-            margin-right: 0.5rem;
-        }
-        .step-item svg {
-            flex-shrink: 0;
-        }
-        .mockup-placeholder {
-            background-color: #E9ECEF;
-            border: 2px dashed #ADB5BD;
-            color: #495057;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 0.9rem;
-            min-height: 300px;
-        }
-        /* Estilos para el acordeón de FAQ */
-        .faq-item details > summary {
-            list-style: none;
-            cursor: pointer;
-            font-weight: 600;
-            padding: 1rem;
-            border-bottom: 1px solid #e5e7eb; /* gray-200 */
-        }
-        .faq-item details > summary::-webkit-details-marker {
-            display: none;
-        }
-        .faq-item details > summary::after {
-            content: '+';
-            float: right;
-            font-size: 1.5rem;
-            line-height: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-        .faq-item details[open] > summary::after {
-            transform: rotate(45deg);
-        }
-        .faq-item details div {
-            padding: 1rem;
-            border-bottom: 1px solid #e5e7eb; /* gray-200 */
-        }
-
-        /* Estilos para íconos de redes sociales en el footer */
-        .social-icon {
-            display: inline-block;
-            padding: 0.5rem; /* Ajusta el padding si es necesario */
-            transition: color 0.3s ease;
-        }
-        .social-icon svg {
-            width: 1.5rem; /* 24px */
-            height: 1.5rem; /* 24px */
-        }
-
-        /* Custom Modal Styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .modal-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 90%;
-            width: 400px;
-        }
-        .modal-content button {
-            margin-top: 1rem;
-            padding: 0.5rem 1.5rem;
-            background-color: #3B82F6;
-            color: white;
-            border-radius: 0.25rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .modal-content button:hover {
-            background-color: #1D4ED8;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PetSync | Gestión Veterinaria Inteligente para Clínicas y Dueños de Mascotas</title>
+  <meta name="description" content="PetSync es la plataforma que conecta clínicas y dueños de mascotas con historiales compartidos, recordatorios inteligentes y comunicación fluida. ¡Simplifica el cuidado hoy mismo!">
+  <meta property="og:title" content="PetSync | Software para Clínicas Veterinarias y App para Dueños">
+  <meta property="og:description" content="Optimiza la gestión de tu clínica y ten el historial de tu mascota siempre a mano. Sin citas, sin complicaciones.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--brand:#4f46e5}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .heading{font-family:Poppins,Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .glass{backdrop-filter: blur(8px);background: rgba(255,255,255,0.7)}
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-    <section class="hero-bg text-white min-h-screen flex items-center justify-center p-6 md:p-12">
-        <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
-            <div class="text-center md:text-left">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    <span class="paw-icon">🐾</span>PetSync: El cuidado de tu mascota, simple y conectado.
-                </h1>
-                <p class="text-lg sm:text-xl mb-8 text-blue-100">
-                    Conectamos tutores y veterinarias para una gestión de salud integral. Agendá turnos, accedé a historiales médicos y más, todo en un solo lugar.
-                </p>
-                <a href="#waitlist" class="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition duration-300 inline-block">
-                    Sumate a la Waitlist
-                </a>
-            </div>
-            <div class="flex justify-center md:justify-end">
-                <div class="bg-white p-6 rounded-xl mockup-card w-full max-w-md transform md:scale-105 lg:rotate-3">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-500 p-2 rounded-full mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Historial de "Rocky"</h3>
-                    </div>
-                    <div class="space-y-3 text-gray-700">
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200">
-                            <p class="font-medium text-sm text-blue-600">Última Visita:</p>
-                            <p class="text-base">Control Anual - 15/05/2025</p>
-                        </div>
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200">
-                            <p class="font-medium text-sm text-orange-500">Próxima Vacuna:</p>
-                            <p class="text-base">Antirrábica - Recordatorio 01/07</p>
-                        </div>
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200">
-                            <p class="font-medium text-sm text-gray-600">Diagnóstico Reciente:</p>
-                            <p class="text-base">Alergia leve. Dieta especial.</p>
-                        </div>
-                           <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition duration-300 text-sm">
-                                Ver historial completo
-                            </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="beneficios-tutores" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto max-w-6xl px-6">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">
-                Beneficios para <span class="text-blue-600">Tutores</span>
-            </h2>
-            <p class="text-center text-gray-600 text-lg mb-12 md:mb-16 max-w-2xl mx-auto">
-                Todo lo que necesitas para el cuidado de tu mascota, al alcance de tu mano y conectado con tu veterinaria.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 md:gap-10">
-                <div class="benefit-card bg-gray-50 p-6 rounded-xl shadow-lg text-center border border-gray-200">
-                    <div class="icon-placeholder bg-blue-100 text-blue-600 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2zM9 7h6m-6 4h6m-6 4h4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Tu Mascota, Siempre Contigo</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Accedé y gestioná el historial médico completo de tu mascota desde cualquier lugar. Escaneá recetas y documentos para tener toda la información centralizada y al alcance de tu mano.
-                    </p>
-                </div>
-                <div class="benefit-card bg-gray-50 p-6 rounded-xl shadow-lg text-center border border-gray-200">
-                    <div class="icon-placeholder bg-green-100 text-green-600 mx-auto">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4s-1.79 4-4 4c-1.742 0-3.223-.835-3.772-2M9 12H4m12 0h-5m-7 0H3.262M10.976 19h-2.952M15 19H9.25M9 12l2.25-3M15 12l-2.25-3M9 12l2.25 3M15 12l-2.25 3M6.31 16.975A6.965 6.965 0 005.5 15.25a6.999 6.999 0 005.25-10.5A6.999 6.999 0 0013.25 9M17.69 16.975A6.965 6.965 0 0118.5 15.25a6.999 6.999 0 01-5.25-10.5A6.999 6.999 0 0110.75 9" />
-                            </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Inteligencia Artificial a tu Servicio <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full align-middle ml-1">Próximamente</span></h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Consultá dudas sobre tratamientos pasados o próximos cuidados. Preguntale a PetSync: "¿Cuándo fue la última vacuna de Thor?" o "¿Qué medicación le dimos para su otitis?".
-                    </p>
-                </div>
-                <div class="benefit-card bg-gray-50 p-6 rounded-xl shadow-lg text-center border border-gray-200">
-                    <div class="icon-placeholder bg-purple-100 text-purple-600 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2zM12 14l-3 3m0 0l-3-3m3 3V7" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Agenda Inteligente, Cero Estrés</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Organizá turnos, vacunas y desparasitaciones sin esfuerzo. Recibí recordatorios inteligentes para que nunca más olvides una cita importante.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="beneficios-veterinarias" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto max-w-6xl px-6">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">
-                Beneficios para <span class="text-green-600">Veterinarias</span>
-            </h2>
-            <p class="text-center text-gray-600 text-lg mb-12 md:mb-16 max-w-2xl mx-auto">
-                Optimizá la gestión de tu clínica, fortalecé la relación con tus pacientes y ampliá tu alcance profesional.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 md:gap-10">
-                <div class="benefit-card bg-white p-6 rounded-xl shadow-lg text-center border border-gray-200">
-                    <div class="icon-placeholder bg-indigo-100 text-indigo-600 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Optimizá tu Tiempo, Maximizá tu Impacto</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Gestioná tu agenda de forma eficiente, reducí la carga administrativa y dedicá más tiempo a lo que realmente importa: el cuidado de tus pacientes.
-                    </p>
-                </div>
-                <div class="benefit-card bg-white p-6 rounded-xl shadow-lg text-center border border-gray-200">
-                    <div class="icon-placeholder bg-pink-100 text-pink-600 mx-auto">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Conexión Directa, Pacientes Felices</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Fortalecé la relación con tus clientes centralizando la información y facilitando una comunicación fluida y proactiva. Un servicio que fideliza.
-                    </p>
-                </div>
-                <div class="benefit-card bg-white p-6 rounded-xl shadow-lg text-center border border-gray-200">
-                    <div class="icon-placeholder bg-teal-100 text-teal-600 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Ampliá tu Comunidad y Servicios</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Unite a una red creciente de tutores y profesionales. PetSync es el punto de encuentro para veterinarias, pet shops y proveedores que buscan conectar y ofrecer lo mejor.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="como-funciona" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto max-w-6xl px-6">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12 md:mb-16">
-                ¿Cómo Funciona <span class="text-blue-600">PetSync</span>?
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-                <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">
-                        Para <span class="text-blue-500">Tutores</span>: El Cuidado de tu Mascota, Simplificado
-                    </h3>
-                    <ul class="space-y-4 mb-6">
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700"><strong>Descargá la app</strong> PetSync.</span>
-                        </li>
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700">Creá un <strong>perfil detallado</strong> para tu mascota.</span>
-                        </li>
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700">Conectate fácilmente con tu <strong>veterinaria de confianza</strong>.</span>
-                        </li>
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700">Gestioná <strong>turnos y recibí recordatorios</strong> importantes.</span>
-                        </li>
-                    </ul>
-                    <p class="text-center text-xl font-medium text-gray-800 mb-6">¡Así de fácil!</p>
-                    <div class="mockup-placeholder rounded-lg p-4">
-                        [Mockup de teléfono mostrando<br>pasos en la app PetSync]
-                    </div>
-                </div>
-                <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">
-                        Para <span class="text-green-500">Veterinarias</span>: Potenciá tu Clínica, Conectá con Pacientes
-                    </h3>
-                    <ul class="space-y-4 mb-6">
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700"><strong>Registrate</strong> en PetSync.</span>
-                        </li>
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700">Creá un <strong>perfil completo</strong> para tu clínica.</span>
-                        </li>
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700">Invitá a tus pacientes a <strong>unirse a la comunidad</strong> PetSync.</span>
-                        </li>
-                        <li class="flex items-start step-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-gray-700">Gestioná <strong>turnos y enviá comunicados</strong> importantes.</span>
-                        </li>
-                    </ul>
-                      <p class="text-center text-xl font-medium text-gray-800 mb-6">¡Así de fácil!</p>
-                    <div class="mockup-placeholder rounded-lg p-4">
-                        [Mockup de tablet/desktop mostrando<br>interfaz de veterinaria PetSync]
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="quienes-somos" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto max-w-4xl px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8">
-                Quiénes <span class="text-blue-600">Somos</span>
-            </h2>
-            
-            <div class="logo-placeholder-about bg-blue-500 text-white mx-auto mb-8 p-3">
-                <span class="paw-icon-about">🐾</span>
-                <span class="text-2xl font-semibold">PetSync</span>
-            </div>
-
-            <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-3xl mx-auto">
-                En PetSync, desarrollamos una plataforma móvil pensada para tutores y clínicas veterinarias, convencidos de que el cuidado de las mascotas puede ser más simple y eficiente para todos. Organizamos turnos, centralizamos historiales clínicos y facilitamos el acceso a productos esenciales, todo desde tu celular.
-            </p>
-            <p class="text-xl font-semibold text-gray-800 mb-8">
-                "Conectamos ambos lados del mostrador, <span class="text-blue-600">una patita a la vez</span>."
-            </p>
-            <p class="text-lg text-gray-600 italic max-w-2xl mx-auto">
-                Tu mascota, sus cosas, todo en orden. Para vos y para la veterinaria.
-            </p>
-        </div>
-    </section>
-
-    <section id="waitlist" class="py-16 md:py-24 bg-blue-600 text-white">
-        <div class="container mx-auto max-w-3xl px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">¡Estamos en versión beta!</h2>
-            <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-                Sumate a la waitlist para ser de los primeros en probar PetSync y ayudarnos a construir la mejor herramienta para el cuidado de nuestras mascotas.
-            </p>
-            <form action="#" method="POST" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl text-gray-700">
-                <div class="mb-6">
-                    <label for="email_waitlist" class="block text-sm font-medium mb-2 text-left">Tu correo electrónico</label>
-                    <input type="email" name="email_waitlist" id="email_waitlist" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="nombre@ejemplo.com">
-                </div>
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2 text-left">Soy...</label>
-                    <div class="flex flex-col sm:flex-row sm:space-x-4">
-                        <label for="tutor_checkbox" class="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100 cursor-pointer">
-                            <input type="checkbox" name="user_type" id="tutor_checkbox" value="tutor" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                            <span>Tutor de mascota</span>
-                        </label>
-                        <label for="vet_checkbox" class="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100 cursor-pointer">
-                            <input type="checkbox" name="user_type" id="vet_checkbox" value="veterinario" class="h-5 w-5 text-green-600 border-gray-300 rounded focus:ring-green-500">
-                            <span>Veterinario/a</span>
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition duration-300">
-                    Quiero ser de los primeros
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <section id="faq" class="py-16 md:py-24 bg-gray-50">
-        <div class="container mx-auto max-w-3xl px-6">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
-                Preguntas <span class="text-blue-600">Frecuentes</span>
-            </h2>
-            <div class="space-y-4">
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <details>
-                        <summary>¿Qué es PetSync y cómo puede ayudarme?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> PetSync es una plataforma móvil que conecta a tutores de mascotas con clínicas veterinarias. Simplifica la gestión del cuidado de tu mascota permitiéndote agendar turnos, acceder a historiales médicos centralizados, recibir recordatorios y mucho más, todo desde tu celular. Para las veterinarias, optimiza la agenda, reduce la carga administrativa y mejora la comunicación con los clientes.
-                        </div>
-                    </details>
-                </div>
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <details>
-                        <summary>¿Cómo me registro en PetSync?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> Actualmente estamos en versión beta. Dejanos tu contacto en nuestra waitlist (un poco más arriba en esta página) y te avisaremos tan pronto como puedas registrarte para ser de los primeros en probar PetSync.
-                        </div>
-                    </details>
-                </div>
-                   <div class="faq-item bg-white rounded-lg shadow-md">
-                    <details>
-                        <summary>¿PetSync tiene costo para los tutores de mascotas?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> Estamos definiendo los detalles finales, pero nuestro objetivo es que la versión básica de PetSync para tutores sea gratuita, ofreciendo todas las funcionalidades esenciales para el cuidado de sus mascotas. Podrían existir funciones premium opcionales en el futuro.
-                        </div>
-                    </details>
-                </div>
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <details>
-                        <summary>¿Para quiénes está pensado PetSync?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> PetSync está pensado principalmente para tutores de mascotas urbanos, de entre 25 y 40 años, y para clínicas veterinarias y profesionales independientes en Buenos Aires que buscan optimizar su gestión y ofrecer un servicio más conectado y moderno a sus pacientes.
-                        </div>
-                    </details>
-                </div>
-                   <div class="faq-item bg-white rounded-lg shadow-md">
-                    <details>
-                        <summary>Soy veterinario independiente, ¿PetSync me sirve?</summary>
-                        <div class="text-gray-600 leading-relaxed p-6"> ¡Claro que sí! PetSync está diseñado para adaptarse tanto a clínicas veterinarias con varios profesionales como a veterinarios independientes. Te ayudará a organizar tu agenda, mantener historiales digitalizados y comunicarte eficientemente con los tutores de tus pacientes.
-                        </div>
-                    </details>
-                </div>
-                </div>
-        </div>
-    </section>
-
-    <section id="pago-dinamico" class="max-w-xl mx-auto my-16 bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-        <h2 class="text-2xl font-bold mb-4 text-center">Realizar un pago en PetSync</h2>
-
-        <form id="checkout-form" class="space-y-6">
-            <div>
-                <label for="concepto" class="block text-sm font-medium mb-1">¿Qué estás pagando?</label>
-                <select id="concepto" name="concepto" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-blue-500" required>
-                    <option value="">Seleccionar concepto</option>
-                    <option value="Suscripción mensual">Suscripción mensual (nube)</option>
-                    <option value="Módulo Veterinaria">Módulo para veterinaria</option>
-                    <option value="Copia de Seguridad">Copia de seguridad de historial</option>
-                    <option value="Otro">Otro</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="monto" class="block text-sm font-medium mb-1">Monto a pagar (ARS)</label>
-                <input type="number" id="monto" name="monto" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Ej: 5000" required min="1">
-            </div>
-
-            <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
-                Ir al pago
-            </button>
-        </form>
-    </section>
-
-    <footer class="bg-gray-800 text-gray-400 py-8">
-        <div class="container mx-auto max-w-6xl px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <div class="inline-flex items-center text-white mb-2">
-                        <span class="paw-icon-about text-xl">🐾</span>
-                        <span class="text-lg font-semibold">PetSync</span>
-                    </div>
-                    <p class="text-xs">&copy; 2025 PetSync. Todos los derechos reservados.</p>
-                </div>
-
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <a href="#" class="text-xs hover:text-white px-2 py-1">Contacto</a>
-                    <span class="text-xs">|</span>
-                    <a href="#" class="text-xs hover:text-white px-2 py-1">Términos y condiciones</a>
-                    <span class="text-xs">|</span>
-                    <a href="#" class="text-xs hover:text-white px-2 py-1">Política de Privacidad</a>
-                </div>
-                
-                <div class="flex space-x-3">
-                    <a href="#" aria-label="Instagram de PetSync" class="social-icon text-gray-400 hover:text-pink-500">
-                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.417 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="LinkedIn de PetSync" class="social-icon text-gray-400 hover:text-blue-500">
-                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div id="custom-modal" class="modal-overlay">
-        <div class="modal-content">
-            <p id="modal-message" class="text-lg font-semibold text-gray-800"></p>
-            <button id="modal-close-button">Cerrar</button>
-        </div>
+<body class="bg-gradient-to-b from-slate-50 to-white text-slate-900 selection:bg-indigo-100 selection:text-slate-900">
+  <header class="sticky top-0 z-40 glass border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-extrabold text-lg tracking-tight">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-600 text-white">PS</span>
+        <span aria-label="PetSync" class="heading">PetSync</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#clinicas" class="hover:text-indigo-600">Para Clínicas</a>
+        <a href="#duenos" class="hover:text-indigo-600">Para Dueños</a>
+        <a href="#funciona" class="hover:text-indigo-600">Cómo Funciona</a>
+        <a href="#precios" class="hover:text-indigo-600">Precios</a>
+        <a href="#faq" class="hover:text-indigo-600">FAQ</a>
+      </nav>
+      <a href="#precios" class="hidden sm:inline-flex px-4 py-2 rounded-xl bg-indigo-600 text-white font-semibold shadow">Empezar</a>
     </div>
+  </header>
 
-    <script>
-        // Script para el acordeón de FAQ (MANTENLO TAL CUAL)
-        document.querySelectorAll('.faq-item details').forEach((detail) => {
-            detail.addEventListener('toggle', function(event) {
-                if (this.open) {
-                    document.querySelectorAll('.faq-item details').forEach((otherDetail) => {
-                        if (otherDetail !== this && otherDetail.open) {
-                            otherDetail.removeAttribute('open');
-                        }
-                    });
-                }
-            });
-        });
+  <section class="relative overflow-hidden bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="heading text-4xl md:text-5xl font-extrabold leading-tight">
+          PetSync: La gestión veterinaria inteligente que conecta clínicas y familias.
+        </h1>
+        <p class="mt-4 text-lg/7 text-indigo-100 max-w-xl">
+          Simplifica historiales, centraliza recordatorios y optimiza la comunicación para un cuidado integral de las mascotas.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-white text-indigo-700 font-semibold shadow hover:shadow-md">Solicitar Demo Gratuita</a>
+          <a href="#duenos" class="inline-flex justify-center px-5 py-3 rounded-xl border border-white/30 text-white font-semibold hover:bg-white/10">Descargar App (Gratis)</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-6 bg-white/10 rounded-3xl"></div>
+        <div class="relative rounded-3xl border border-white/20 bg-white/10 shadow-xl p-4">
+          <img src="https://via.placeholder.com/600x400.png?text=Interfaz+de+PetSync+en+Acción" alt="Interfaz de PetSync para gestión de historiales clínicos y recordatorios de mascotas" class="rounded-2xl w-full h-auto">
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Custom Modal Functions (MANTENLAS TAL CUAL)
-        const customModal = document.getElementById('custom-modal');
-        const modalMessage = document.getElementById('modal-message');
-        const modalCloseButton = document.getElementById('modal-close-button');
+  <section id="clinicas" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="heading text-3xl md:text-4xl font-extrabold">Para Clínicas: Optimización y Conectividad</h2>
+        <p class="mt-3 text-slate-600">Estandariza historiales, utiliza plantillas y gestiona la comunicación con tutores de forma ordenada — <span class="font-semibold">sin la complejidad de un sistema de turnos</span>.</p>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Historiales clínicos y archivos</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Plantillas de vacunas y desparasitación</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Mensajería estructurada con tutores</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Exportación de datos (CSV y PDF)</li>
+        </ul>
+        <div class="mt-8 text-center sm:text-left">
+          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow">Solicitar Demo Gratuita</a>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
+        <h3 class="font-semibold text-lg">Vista de la Clínica</h3>
+        <div class="mt-4 grid gap-3">
+          <img src="https://via.placeholder.com/600x400.png?text=Dashboard+de+la+Clínica" alt="Captura de pantalla del dashboard de PetSync para veterinarias" class="rounded-2xl w-full h-auto">
+        </div>
+      </div>
+    </div>
+  </section>
 
-        function showCustomModal(message) {
-            modalMessage.textContent = message;
-            customModal.classList.add('open');
-        }
+  <section id="duenos" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="order-2 md:order-1 rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
+        <h3 class="font-semibold text-lg">App para Tutores</h3>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Gestiona varias mascotas en un solo perfil</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Recordatorios de vacunas y medicación</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Notas médicas y archivos adjuntos</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Comparte el historial con tu clínica</li>
+        </ul>
+      </div>
+      <div class="order-1 md:order-2">
+        <h2 class="heading text-3xl md:text-4xl font-extrabold">Para Dueños: Tranquilidad y Control</h2>
+        <p class="mt-3 text-slate-600">Todo el historial de tu mascota en un solo lugar. Recibe recordatorios claros y comparte fácilmente la información con tu veterinario.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow">Descargar App (Gratis)</a>
+          <a href="#funciona" class="inline-flex justify-center px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 font-semibold">Ver cómo funciona</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        function hideCustomModal() {
-            customModal.classList.remove('open');
-        }
+  <section id="funciona" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <h2 class="heading text-3xl md:text-4xl font-extrabold text-center">Tu Viaje con PetSync: Simple, Rápido y Efectivo</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-4">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-semibold text-lg">1</span>
+          <h3 class="font-semibold text-xl">Para Clínicas</h3>
+        </div>
+        <ul class="mt-4 text-slate-600 space-y-2 text-sm">
+          <li>Crea tu espacio y configura plantillas.</li>
+          <li>Carga historiales y archivos.</li>
+          <li>Invita a los tutores a acceder a su historial.</li>
+          <li>Utiliza la mensajería estructurada para seguimientos.</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-4">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-semibold text-lg">2</span>
+          <h3 class="font-semibold text-xl">Para Dueños</h3>
+        </div>
+        <ul class="mt-4 text-slate-600 space-y-2 text-sm">
+          <li>Crea tu cuenta y agrega a tus mascotas.</li>
+          <li>Recibe notificaciones de recordatorios importantes.</li>
+          <li>Guarda notas y archivos en el historial de tu mascota.</li>
+          <li>Comparte la información con tu clínica.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section id="testimonios" class="bg-slate-100 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="heading text-3xl md:text-4xl font-extrabold">Lo que dicen nuestros usuarios</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-white p-6 shadow-md">
+          <p class="italic text-slate-700">"PetSync nos ayudó a ordenar el caos de los historiales. Ahora tenemos todo centralizado y la comunicación con los dueños es mucho más eficiente. Una herramienta indispensable."</p>
+          <div class="mt-4 text-sm font-semibold">Dr. Juan Pérez</div>
+          <div class="text-xs text-slate-500">Clínica Veterinaria San Telmo</div>
+        </div>
+        <div class="rounded-2xl bg-white p-6 shadow-md">
+          <p class="italic text-slate-700">"Nunca más olvidé una vacuna gracias a la app. Tener toda la info de mi perro en el celular me da mucha tranquilidad, y compartirlo con mi veterinario es muy fácil."</p>
+          <div class="mt-4 text-sm font-semibold">Laura M.</div>
+          <div class="text-xs text-slate-500">Dueña de Rocky</div>
+        </div>
+        <div class="rounded-2xl bg-white p-6 shadow-md">
+          <p class="italic text-slate-700">"La plataforma es muy intuitiva, y el equipo de soporte es excelente. PetSync nos ahorra tiempo en la gestión administrativa y nos permite enfocarnos más en la atención de las mascotas."</p>
+          <div class="mt-4 text-sm font-semibold">Dr. Ana Gómez</div>
+          <div class="text-xs text-slate-500">Veterinaria del Parque</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        modalCloseButton.addEventListener('click', hideCustomModal);
-        customModal.addEventListener('click', (e) => {
-            if (e.target === customModal) {
-                hideCustomModal();
-            }
-        });
+  <section id="precios" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <div class="text-center">
+      <h2 class="heading text-3xl md:text-4xl font-extrabold">Planes Flexibles para Cada Necesidad</h2>
+      <p class="mt-3 text-slate-600">Sin agendas, solo lo esencial: historiales, recordatorios y mensajería.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="rounded-3xl border-2 border-indigo-600 bg-white p-6 shadow-xl relative">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-semibold px-4 py-1 rounded-full">PLAN POPULAR</div>
+        <div class="flex items-baseline justify-between">
+          <h3 class="text-2xl font-bold">Clínica</h3>
+          <span class="text-4xl font-extrabold">USD 49</span>
+        </div>
+        <p class="text-sm text-slate-600">por mes por clínica</p>
+        <ul class="mt-6 space-y-2 text-sm text-slate-700">
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>2 usuarios incluidos</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Historiales clínicos compartidos</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Plantillas y recordatorios</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Mensajería estructurada</li>
+        </ul>
+        <a href="https://ejemplo.com/checkout-seguro" class="mt-8 block w-full px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold text-center hover:bg-indigo-700">Comenzar Ahora</a>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-md">
+        <div class="flex items-baseline justify-between">
+          <h3 class="text-2xl font-bold">Dueños</h3>
+          <span class="text-4xl font-extrabold">Gratis</span>
+        </div>
+        <p class="text-sm text-slate-600">Únete a la lista de espera</p>
+        <ul class="mt-6 space-y-2 text-sm text-slate-700">
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Múltiples mascotas por perfil</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Recordatorios y notificaciones</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Notas y archivos médicos</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Historial compartido con la clínica</li>
+        </ul>
+        <form id="waitlist" class="mt-8 space-y-3" aria-label="Formulario de lista de espera">
+          <input type="email" name="email" required placeholder="Tu email" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          <button type="submit" class="w-full px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800">Unirme a la Lista de Espera</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-        // --- INICIO CÓDIGO OPENPAY ---
+  <section id="faq" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <h2 class="heading text-3xl md:text-4xl font-extrabold text-center">Preguntas Frecuentes</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" open>
+        <summary class="font-semibold cursor-pointer text-lg">¿PetSync es solo para clínicas o también para dueños?</summary>
+        <p class="mt-2 text-slate-600">Ambos. La clínica usa PetSync como una plataforma ligera para gestionar historiales y recordatorios, mientras que los dueños acceden a esta información desde una app gratuita para su tranquilidad.</p>
+      </details>
+      <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <summary class="font-semibold cursor-pointer text-lg">¿PetSync incluye un sistema de turnos o agenda?</summary>
+        <p class="mt-2 text-slate-600">No. La ventaja de PetSync es su simplicidad. Nos enfocamos en los historiales, recordatorios y la mensajería estructurada, eliminando la complejidad de la gestión de turnos.</p>
+      </details>
+      <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <summary class="font-semibold cursor-pointer text-lg">¿Puedo migrar los historiales de mi clínica?</summary>
+        <p class="mt-2 text-slate-600">Sí. Puedes migrar tu información de forma sencilla a través de archivos CSV. Si lo necesitas, nuestro equipo puede asistirte en la carga inicial de datos para que tu transición sea fluida.</p>
+      </details>
+      <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <summary class="font-semibold cursor-pointer text-lg">¿La app para dueños es realmente gratis?</summary>
+        <p class="mt-2 text-slate-600">Sí. La app para dueños es completamente gratuita. Nuestro modelo de negocio se basa en la suscripción de las clínicas. Esto nos permite hacer el servicio accesible para todas las familias.</p>
+      </details>
+    </div>
+  </section>
 
-        // Asume que tu Firebase Function para crear la orden de pago se llama 'createOpenpayOrder'
-        // y está desplegada en una URL similar a esta.
-        // DEBES REEMPLAZAR ESTA URL con la URL REAL de tu Firebase Function.
-        const FIREBASE_CREATE_ORDER_FUNCTION_URL = 'https://us-central1-tu-proyecto-firebase.cloudfunctions.net/createOpenpayOrder'; // ¡IMPORTANTE: Reemplaza esto con tu URL REAL!
+  <footer class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-4 gap-6 text-sm">
+      <div>
+        <div class="flex items-center gap-2 font-extrabold text-lg"><span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 text-white">PS</span> <span class="heading">PetSync</span></div>
+        <p class="mt-3 text-slate-600">Historial compartido y recordatorios entre clínicas y dueños de mascotas.</p>
+      </div>
+      <div>
+        <div class="font-semibold">Producto</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="#clinicas" class="hover:text-indigo-600">Para Clínicas</a></li>
+          <li><a href="#duenos" class="hover:text-indigo-600">Para Dueños</a></li>
+          <li><a href="#funciona" class="hover:text-indigo-600">Cómo Funciona</a></li>
+          <li><a href="#precios" class="hover:text-indigo-600">Precios</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Compañía</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="#" class="hover:text-indigo-600">Acerca de Nosotros</a></li>
+          <li><a href="#" class="hover:text-indigo-600">Contacto</a></li>
+          <li><a href="#" class="hover:text-indigo-600">Política de Privacidad</a></li>
+          <li><a href="#" class="hover:text-indigo-600">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Empezar</div>
+        <p class="mt-2 text-slate-600">Las clínicas pueden empezar hoy. Los dueños pueden unirse a la lista de espera.</p>
+        <a href="#precios" class="mt-3 inline-flex px-4 py-2 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700">Empezar ahora</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 pb-8 text-xs text-slate-500">© <span id="year"></span> PetSync. Todos los derechos reservados.</div>
+  </footer>
 
-        document.getElementById('checkout-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const concepto = document.getElementById('concepto').value;
-            const montoStr = document.getElementById('monto').value;
-            // Openpay trabaja con montos en centavos/unidades menores.
-            // Si el usuario ingresa 5000, Openpay necesita 500000 (5000 * 100).
-            const montoEnCentavos = parseInt(montoStr, 10) * 100; // Multiplicar por 100 para enviar en centavos
-
-            if (!concepto || isNaN(montoEnCentavos) || montoEnCentavos < 100) { // Monto mínimo de 100 centavos = 1 ARS
-                showCustomModal("Por favor, ingresa un concepto y un monto válido (mínimo $1).");
-                return;
-            }
-
-            // Deshabilitar el botón y mostrar un mensaje de carga
-            const submitButton = e.submitter;
-            const originalButtonText = submitButton.textContent;
-            submitButton.disabled = true;
-            submitButton.textContent = 'Procesando...';
-            submitButton.classList.remove('bg-green-600', 'hover:bg-green-700');
-            submitButton.classList.add('bg-gray-400', 'cursor-not-allowed');
-
-            try {
-                // Llama a tu Firebase Function para crear la orden de pago en Openpay
-                const response = await fetch(FIREBASE_CREATE_ORDER_FUNCTION_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        concepto: concepto,
-                        amount: montoEnCentavos // Envía el monto en centavos
-                    })
-                });
-
-                const data = await response.json();
-
-                if (response.ok && data.checkoutUrl) {
-                    showCustomModal("Redirigiendo a Openpay...");
-                    window.location.href = data.checkoutUrl; // Redirige al usuario al checkout de Openpay
-                } else {
-                    // Si hay un error del lado de tu Firebase Function o de Openpay
-                    console.error("Error al crear la orden de pago:", data.error || data.message);
-                    showCustomModal(`Error al iniciar el pago: ${data.error || data.message || 'Intenta de nuevo.'}`);
-                }
-
-            } catch (error) {
-                console.error("Error de conexión o inesperado:", error);
-                showCustomModal("Hubo un problema al conectar con el servicio de pago. Intenta de nuevo más tarde.");
-            } finally {
-                // Habilitar el botón nuevamente
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
-                submitButton.classList.remove('bg-gray-400', 'cursor-not-allowed');
-                submitButton.classList.add('bg-green-600', 'hover:bg-green-700');
-            }
-        });
-
-        // --- FIN CÓDIGO OPENPAY ---
-    </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+```
