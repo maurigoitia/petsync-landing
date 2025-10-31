@@ -1,45 +1,65 @@
-Perfecto. Aquí tienes el código HTML de la página principal de PetSync, optimizada con las mejoras de diseño y SEO que discutimos. Está listo para copiar y pegar.
-
-Este código incluye:
-
-  * Una estructura más moderna y visual.
-  * **Encabezados (H1, H2)** optimizados para SEO.
-  * **Secciones claras** y mejor organizadas.
-  * **Testimonios** para generar confianza.
-  * **CTAs (Llamadas a la Acción)** más directas.
-  * Uso de **Tailwind CSS desde un CDN**, lo que significa que puedes pegarlo directamente en tu editor de código y funcionará de inmediato.
-
------
-
-### Código HTML de la Página Principal Optimizada
-
-Copia todo el código que se encuentra a continuación y pégalo en un archivo llamado `index.html`. Luego, puedes subirlo a tu servidor o usarlo como base para recrear la página en Squarespace.
-
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PetSync | Gestión Veterinaria Inteligente para Clínicas y Dueños de Mascotas</title>
-  <meta name="description" content="PetSync es la plataforma que conecta clínicas y dueños de mascotas con historiales compartidos, recordatorios inteligentes y comunicación fluida. ¡Simplifica el cuidado hoy mismo!">
-  <meta property="og:title" content="PetSync | Software para Clínicas Veterinarias y App para Dueños">
-  <meta property="og:description" content="Optimiza la gestión de tu clínica y ten el historial de tu mascota siempre a mano. Sin citas, sin complicaciones.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_AR">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="PetSync conecta clínicas y dueños con historiales compartidos, recordatorios inteligentes y comunicación fluida. Simplificá el cuidado hoy mismo." />
+
+  <!-- Canonical + Icons -->
+  <link rel="canonical" href="https://petsync.net/" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="PetSync | Software para Clínicas Veterinarias y App para Dueños" />
+  <meta property="og:description" content="Optimiza la gestión de tu clínica y tené el historial de tu mascota siempre a mano. Sin complicaciones." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:url" content="https://petsync.net/" />
+  <meta property="og:image" content="https://petsync.net/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"PetSync",
+    "url":"https://petsync.net",
+    "logo":"https://petsync.net/logo.png",
+    "sameAs":[]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"PetSync",
+    "url":"https://petsync.net",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://petsync.net/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+
   <style>
     :root{--brand:#4f46e5}
     html{scroll-behavior:smooth}
     body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     .heading{font-family:Poppins,Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    .glass{backdrop-filter: blur(8px);background: rgba(255,255,255,0.7)}
+    .glass{backdrop-filter: blur(10px); background: rgba(255,255,255,.75)}
   </style>
 </head>
 <body class="bg-gradient-to-b from-slate-50 to-white text-slate-900 selection:bg-indigo-100 selection:text-slate-900">
+  <!-- Header -->
   <header class="sticky top-0 z-40 glass border-b border-slate-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2 font-extrabold text-lg tracking-tight">
@@ -57,34 +77,36 @@ Copia todo el código que se encuentra a continuación y pégalo en un archivo l
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="relative overflow-hidden bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <h1 class="heading text-4xl md:text-5xl font-extrabold leading-tight">
-          PetSync: La gestión veterinaria inteligente que conecta clínicas y familias.
+          PetSync: la gestión veterinaria inteligente que conecta clínicas y familias
         </h1>
         <p class="mt-4 text-lg/7 text-indigo-100 max-w-xl">
-          Simplifica historiales, centraliza recordatorios y optimiza la comunicación para un cuidado integral de las mascotas.
+          Simplificá historiales, centralizá recordatorios y mejorá la comunicación para un cuidado integral de las mascotas.
         </p>
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-white text-indigo-700 font-semibold shadow hover:shadow-md">Solicitar Demo Gratuita</a>
-          <a href="#duenos" class="inline-flex justify-center px-5 py-3 rounded-xl border border-white/30 text-white font-semibold hover:bg-white/10">Descargar App (Gratis)</a>
+          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-white text-indigo-700 font-semibold shadow hover:shadow-md">Solicitar demo gratuita</a>
+          <a href="#duenos" class="inline-flex justify-center px-5 py-3 rounded-xl border border-white/30 text-white font-semibold hover:bg-white/10">Descargar app (gratis)</a>
         </div>
       </div>
       <div class="relative">
         <div class="absolute -inset-6 bg-white/10 rounded-3xl"></div>
         <div class="relative rounded-3xl border border-white/20 bg-white/10 shadow-xl p-4">
-          <img src="https://via.placeholder.com/600x400.png?text=Interfaz+de+PetSync+en+Acción" alt="Interfaz de PetSync para gestión de historiales clínicos y recordatorios de mascotas" class="rounded-2xl w-full h-auto">
+          <img src="https://via.placeholder.com/600x400.png?text=Interfaz+de+PetSync+en+Acci%C3%B3n" alt="Pantalla de PetSync mostrando historial clínico y recordatorios" class="rounded-2xl w-full h-auto" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Clínicas -->
   <section id="clinicas" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h2 class="heading text-3xl md:text-4xl font-extrabold">Para Clínicas: Optimización y Conectividad</h2>
-        <p class="mt-3 text-slate-600">Estandariza historiales, utiliza plantillas y gestiona la comunicación con tutores de forma ordenada — <span class="font-semibold">sin la complejidad de un sistema de turnos</span>.</p>
+        <h2 class="heading text-3xl md:text-4xl font-extrabold">Para Clínicas: optimización y conectividad</h2>
+        <p class="mt-3 text-slate-600">Estandarizá historiales, usá plantillas y gestioná la comunicación con tutores de forma ordenada — <span class="font-semibold">sin la complejidad de un sistema de turnos</span>.</p>
         <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
           <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Historiales clínicos y archivos</li>
           <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Plantillas de vacunas y desparasitación</li>
@@ -92,99 +114,102 @@ Copia todo el código que se encuentra a continuación y pégalo en un archivo l
           <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Exportación de datos (CSV y PDF)</li>
         </ul>
         <div class="mt-8 text-center sm:text-left">
-          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow">Solicitar Demo Gratuita</a>
+          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow">Solicitar demo gratuita</a>
         </div>
       </div>
       <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-        <h3 class="font-semibold text-lg">Vista de la Clínica</h3>
-        <div class="mt-4 grid gap-3">
-          <img src="https://via.placeholder.com/600x400.png?text=Dashboard+de+la+Clínica" alt="Captura de pantalla del dashboard de PetSync para veterinarias" class="rounded-2xl w-full h-auto">
-        </div>
+        <h3 class="font-semibold text-lg">Vista de la clínica</h3>
+        <img src="https://via.placeholder.com/600x400.png?text=Dashboard+de+la+Cl%C3%ADnica" alt="Dashboard de clínica en PetSync con lista de pacientes y vacunas" class="mt-4 rounded-2xl w-full h-auto" />
       </div>
     </div>
   </section>
 
+  <!-- Dueños -->
   <section id="duenos" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div class="order-2 md:order-1 rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-        <h3 class="font-semibold text-lg">App para Tutores</h3>
+        <h3 class="font-semibold text-lg">App para tutores</h3>
         <ul class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
-          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Gestiona varias mascotas en un solo perfil</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Varias mascotas por perfil</li>
           <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Recordatorios de vacunas y medicación</li>
           <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Notas médicas y archivos adjuntos</li>
-          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Comparte el historial con tu clínica</li>
+          <li class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">Historial compartible con tu clínica</li>
         </ul>
       </div>
       <div class="order-1 md:order-2">
-        <h2 class="heading text-3xl md:text-4xl font-extrabold">Para Dueños: Tranquilidad y Control</h2>
-        <p class="mt-3 text-slate-600">Todo el historial de tu mascota en un solo lugar. Recibe recordatorios claros y comparte fácilmente la información con tu veterinario.</p>
+        <h2 class="heading text-3xl md:text-4xl font-extrabold">Para Dueños: tranquilidad y control</h2>
+        <p class="mt-3 text-slate-600">Todo el historial de tu mascota en un solo lugar. Recibí recordatorios claros y compartí fácilmente la información con tu veterinaria.</p>
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow">Descargar App (Gratis)</a>
+          <a href="#precios" class="inline-flex justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow">Descargar app (gratis)</a>
           <a href="#funciona" class="inline-flex justify-center px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 font-semibold">Ver cómo funciona</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Cómo funciona -->
   <section id="funciona" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-    <h2 class="heading text-3xl md:text-4xl font-extrabold text-center">Tu Viaje con PetSync: Simple, Rápido y Efectivo</h2>
+    <h2 class="heading text-3xl md:text-4xl font-extrabold text-center">Tu viaje con PetSync: simple, rápido y efectivo</h2>
     <div class="mt-8 grid md:grid-cols-2 gap-6">
       <div class="rounded-2xl border border-slate-200 bg-white p-6">
         <div class="flex items-center gap-4">
           <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-semibold text-lg">1</span>
-          <h3 class="font-semibold text-xl">Para Clínicas</h3>
+          <h3 class="font-semibold text-xl">Para clínicas</h3>
         </div>
         <ul class="mt-4 text-slate-600 space-y-2 text-sm">
-          <li>Crea tu espacio y configura plantillas.</li>
-          <li>Carga historiales y archivos.</li>
-          <li>Invita a los tutores a acceder a su historial.</li>
-          <li>Utiliza la mensajería estructurada para seguimientos.</li>
+          <li>Creá tu espacio y configurá plantillas.</li>
+          <li>Cargá historiales y archivos.</li>
+          <li>Invitá a tutores a acceder a su historial.</li>
+          <li>Usá la mensajería estructurada para seguimientos.</li>
         </ul>
       </div>
       <div class="rounded-2xl border border-slate-200 bg-white p-6">
         <div class="flex items-center gap-4">
           <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-semibold text-lg">2</span>
-          <h3 class="font-semibold text-xl">Para Dueños</h3>
+          <h3 class="font-semibold text-xl">Para dueños</h3>
         </div>
         <ul class="mt-4 text-slate-600 space-y-2 text-sm">
-          <li>Crea tu cuenta y agrega a tus mascotas.</li>
-          <li>Recibe notificaciones de recordatorios importantes.</li>
-          <li>Guarda notas y archivos en el historial de tu mascota.</li>
-          <li>Comparte la información con tu clínica.</li>
+          <li>Creá tu cuenta y agregá a tus mascotas.</li>
+          <li>Recibí recordatorios importantes.</li>
+          <li>Guardá notas y archivos en el historial.</li>
+          <li>Compartí la información con tu clínica.</li>
         </ul>
       </div>
     </div>
   </section>
-  
+
+  <!-- Testimonios -->
   <section id="testimonios" class="bg-slate-100 py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
       <h2 class="heading text-3xl md:text-4xl font-extrabold">Lo que dicen nuestros usuarios</h2>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         <div class="rounded-2xl bg-white p-6 shadow-md">
-          <p class="italic text-slate-700">"PetSync nos ayudó a ordenar el caos de los historiales. Ahora tenemos todo centralizado y la comunicación con los dueños es mucho más eficiente. Una herramienta indispensable."</p>
+          <p class="italic text-slate-700">"PetSync nos ayudó a ordenar los historiales. La comunicación con dueños es más eficiente. Indispensable."</p>
           <div class="mt-4 text-sm font-semibold">Dr. Juan Pérez</div>
           <div class="text-xs text-slate-500">Clínica Veterinaria San Telmo</div>
         </div>
         <div class="rounded-2xl bg-white p-6 shadow-md">
-          <p class="italic text-slate-700">"Nunca más olvidé una vacuna gracias a la app. Tener toda la info de mi perro en el celular me da mucha tranquilidad, y compartirlo con mi veterinario es muy fácil."</p>
+          <p class="italic text-slate-700">"Nunca más olvidé una vacuna. Tener toda la info en el celular me da tranquilidad y compartir es fácil."</p>
           <div class="mt-4 text-sm font-semibold">Laura M.</div>
           <div class="text-xs text-slate-500">Dueña de Rocky</div>
         </div>
         <div class="rounded-2xl bg-white p-6 shadow-md">
-          <p class="italic text-slate-700">"La plataforma es muy intuitiva, y el equipo de soporte es excelente. PetSync nos ahorra tiempo en la gestión administrativa y nos permite enfocarnos más en la atención de las mascotas."</p>
-          <div class="mt-4 text-sm font-semibold">Dr. Ana Gómez</div>
+          <p class="italic text-slate-700">"Intuitiva y rápida. Nos ahorra tiempo administrativo y enfocamos más en las mascotas."</p>
+          <div class="mt-4 text-sm font-semibold">Dra. Ana Gómez</div>
           <div class="text-xs text-slate-500">Veterinaria del Parque</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Precios -->
   <section id="precios" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
     <div class="text-center">
-      <h2 class="heading text-3xl md:text-4xl font-extrabold">Planes Flexibles para Cada Necesidad</h2>
-      <p class="mt-3 text-slate-600">Sin agendas, solo lo esencial: historiales, recordatorios y mensajería.</p>
+      <h2 class="heading text-3xl md:text-4xl font-extrabold">Planes flexibles para cada necesidad</h2>
+      <p class="mt-3 text-slate-600">Sin agendas: lo esencial — historiales, recordatorios y mensajería.</p>
     </div>
     <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <!-- Plan Clínica -->
       <div class="rounded-3xl border-2 border-indigo-600 bg-white p-6 shadow-xl relative">
         <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-semibold px-4 py-1 rounded-full">PLAN POPULAR</div>
         <div class="flex items-baseline justify-between">
@@ -193,55 +218,53 @@ Copia todo el código que se encuentra a continuación y pégalo en un archivo l
         </div>
         <p class="text-sm text-slate-600">por mes por clínica</p>
         <ul class="mt-6 space-y-2 text-sm text-slate-700">
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>2 usuarios incluidos</li>
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Historiales clínicos compartidos</li>
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Plantillas y recordatorios</li>
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Mensajería estructurada</li>
+          <li class="flex items-center gap-2">✔ 2 usuarios incluidos</li>
+          <li class="flex items-center gap-2">✔ Historiales clínicos compartidos</li>
+          <li class="flex items-center gap-2">✔ Plantillas y recordatorios</li>
+          <li class="flex items-center gap-2">✔ Mensajería estructurada</li>
         </ul>
-        <a href="https://ejemplo.com/checkout-seguro" class="mt-8 block w-full px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold text-center hover:bg-indigo-700">Comenzar Ahora</a>
+        <a id="checkoutClinic" class="mt-8 block w-full px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold text-center hover:bg-indigo-700 cursor-pointer">Comenzar ahora</a>
+        <p id="payMsg" class="mt-2 text-sm text-slate-600"></p>
       </div>
+      <!-- Plan Dueños -->
       <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-md">
         <div class="flex items-baseline justify-between">
           <h3 class="text-2xl font-bold">Dueños</h3>
           <span class="text-4xl font-extrabold">Gratis</span>
         </div>
-        <p class="text-sm text-slate-600">Únete a la lista de espera</p>
-        <ul class="mt-6 space-y-2 text-sm text-slate-700">
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Múltiples mascotas por perfil</li>
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Recordatorios y notificaciones</li>
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Notas y archivos médicos</li>
-          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Historial compartido con la clínica</li>
-        </ul>
+        <p class="text-sm text-slate-600">Unite a la lista de espera</p>
         <form id="waitlist" class="mt-8 space-y-3" aria-label="Formulario de lista de espera">
           <input type="email" name="email" required placeholder="Tu email" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
-          <button type="submit" class="w-full px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800">Unirme a la Lista de Espera</button>
+          <button type="submit" class="w-full px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800">Unirme a la lista de espera</button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
   <section id="faq" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-    <h2 class="heading text-3xl md:text-4xl font-extrabold text-center">Preguntas Frecuentes</h2>
+    <h2 class="heading text-3xl md:text-4xl font-extrabold text-center">Preguntas frecuentes</h2>
     <div class="mt-8 grid md:grid-cols-2 gap-6">
       <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" open>
         <summary class="font-semibold cursor-pointer text-lg">¿PetSync es solo para clínicas o también para dueños?</summary>
-        <p class="mt-2 text-slate-600">Ambos. La clínica usa PetSync como una plataforma ligera para gestionar historiales y recordatorios, mientras que los dueños acceden a esta información desde una app gratuita para su tranquilidad.</p>
+        <p class="mt-2 text-slate-600">Para ambos. La clínica usa PetSync como plataforma ligera de historiales y recordatorios; los dueños acceden desde la app gratuita.</p>
       </details>
       <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <summary class="font-semibold cursor-pointer text-lg">¿PetSync incluye un sistema de turnos o agenda?</summary>
-        <p class="mt-2 text-slate-600">No. La ventaja de PetSync es su simplicidad. Nos enfocamos en los historiales, recordatorios y la mensajería estructurada, eliminando la complejidad de la gestión de turnos.</p>
+        <summary class="font-semibold cursor-pointer text-lg">¿Incluye sistema de turnos o agenda?</summary>
+        <p class="mt-2 text-slate-600">No. La propuesta es simplicidad: historiales, recordatorios y mensajería estructurada.</p>
       </details>
       <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <summary class="font-semibold cursor-pointer text-lg">¿Puedo migrar los historiales de mi clínica?</summary>
-        <p class="mt-2 text-slate-600">Sí. Puedes migrar tu información de forma sencilla a través de archivos CSV. Si lo necesitas, nuestro equipo puede asistirte en la carga inicial de datos para que tu transición sea fluida.</p>
+        <summary class="font-semibold cursor-pointer text-lg">¿Puedo migrar historiales de mi clínica?</summary>
+        <p class="mt-2 text-slate-600">Sí. Podés migrar vía CSV. Podemos asistirte en la carga inicial para una transición fluida.</p>
       </details>
       <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <summary class="font-semibold cursor-pointer text-lg">¿La app para dueños es realmente gratis?</summary>
-        <p class="mt-2 text-slate-600">Sí. La app para dueños es completamente gratuita. Nuestro modelo de negocio se basa en la suscripción de las clínicas. Esto nos permite hacer el servicio accesible para todas las familias.</p>
+        <summary class="font-semibold cursor-pointer text-lg">¿La app para dueños es gratis?</summary>
+        <p class="mt-2 text-slate-600">Sí. Nuestro modelo se basa en la suscripción de clínicas, lo que mantiene la app gratis para familias.</p>
       </details>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-4 gap-6 text-sm">
       <div>
@@ -275,9 +298,45 @@ Copia todo el código que se encuentra a continuación y pégalo en un archivo l
     <div class="max-w-6xl mx-auto px-4 pb-8 text-xs text-slate-500">© <span id="year"></span> PetSync. Todos los derechos reservados.</div>
   </footer>
 
+  <!-- Sticky mobile CTA -->
+  <a href="#precios" class="fixed bottom-4 inset-x-4 sm:hidden flex items-center justify-center rounded-xl bg-indigo-600 text-white font-semibold py-3 shadow-lg">Empezar gratis</a>
+
+  <!-- Scripts -->
   <script>
+    // Año en footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Waitlist (reemplazá /api/waitlist por tu Cloud Function / endpoint real)
+    document.querySelector('#waitlist')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = e.target.email.value.trim();
+      if(!email) return;
+      try {
+        await fetch('/api/waitlist', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({email})
+        });
+        e.target.reset();
+        alert('¡Listo! Te avisamos pronto.');
+      } catch {
+        alert('No pudimos guardar tu email. Probá de nuevo.');
+      }
+    });
+
+    // Checkout real (usa tu Cloud Function existente)
+    document.getElementById('checkoutClinic')?.addEventListener('click', async ()=> {
+      const msg = document.getElementById('payMsg');
+      msg.textContent = 'Generando link de pago…';
+      try{
+        const r = await fetch('https://us-central1-petsync-lu58g.cloudfunctions.net/createCheckout',{
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ concepto:'Suscripción clínica', monto: 49, currency:'USD' })
+        });
+        const data = await r.json();
+        if(r.ok && data?.checkoutUrl){ window.location.href = data.checkoutUrl; }
+        else { msg.textContent = 'Error al generar el pago.'; }
+      }catch(_){ msg.textContent = 'No se pudo iniciar el pago.'; }
+    });
   </script>
 </body>
 </html>
-```
