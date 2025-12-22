@@ -3,7 +3,7 @@ import { VetDashboardMockup } from './components/dashboard/VetDashboardMockup';
 import { SyncFlowSection } from './components/SyncFlowSection';
 import { ProductModules } from './components/ProductModules';
 import { InteractivePreviews } from './components/InteractivePreviews';
-import { addToWaitlistFirestore } from './services/firebase';
+// import { addToWaitlistFirestore } from './services/firebase';
 
 // --- Diccionario de Traducciones ---
 const translations = {
