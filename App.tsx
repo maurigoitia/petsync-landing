@@ -3,134 +3,126 @@ import { VetDashboardMockup } from './components/dashboard/VetDashboardMockup';
 import { SyncFlowSection } from './components/SyncFlowSection';
 import { ProductModules } from './components/ProductModules';
 import { InteractivePreviews } from './components/InteractivePreviews';
-import { useForm, ValidationError } from '@formspree/react';
 
 /* =========================
-   TRANSLATIONS (SIN CTA)
+   TRANSLATIONS (SIN CTA LOGIC)
 ========================= */
 const translations = {
   es: {
-    nav: { contact: "Contactanos", lang: "Idioma" },
     hero: {
       title_1: "Tu mascota, sus cosas,",
       title_highlight: "sin el desorden de siempre",
       subtitle: "Plataforma integral de tutores y veterinarios",
       cta: "Conocer más"
     },
-    faq: {
-      title: "Preguntas Frecuentes",
-      subtitle: "Todo lo que necesitas saber sobre PetSync",
-      q1: "¿PetSync tiene costo para los tutores?",
-      a1: "No, es completamente gratuita."
-    },
     footer: {
       rights: "Todos los derechos reservados."
     }
   },
   en: {
-    nav: { contact: "Contact", lang: "Language" },
     hero: {
       title_1: "Your pet, their stuff,",
       title_highlight: "without the usual mess",
-      subtitle: "Platform for pet owners and vets",
+      subtitle: "Comprehensive platform for owners and vets",
       cta: "Learn more"
-    },
-    faq: {
-      title: "FAQ",
-      subtitle: "What you need to know",
-      q1: "Is PetSync free?",
-      a1: "Yes, for pet owners."
     },
     footer: {
       rights: "All rights reserved."
     }
+  },
+  pt: {
+    hero: {
+      title_1: "Seu pet, as coisas dele,",
+      title_highlight: "sem a bagunça de sempre",
+      subtitle: "Plataforma para tutores e veterinários",
+      cta: "Saiba mais"
+    },
+    footer: {
+      rights: "Todos os direitos reservados."
+    }
   }
 };
 
-type Language = 'es' | 'en';
-
-/* =========================
-   FORMSPREE FORM
-========================= */
-const ContactForm: React.FC = () => {
-  const [state, handleSubmit] = useForm("xaqwlqoo");
-
-  if (state.succeeded) {
-    return (
-      <p className="text-green-600 font-semibold text-center">
-        Thanks, we’ll contact you shortly.
-      </p>
-    );
-  }
-
-  return (
-    <form
-      onSubmit={handleSubmit}
-      className="w-full max-w-md flex flex-col gap-4"
-    >
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="you@email.com"
-        className="w-full px-5 py-3 rounded-xl border border-gray-300"
-      />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
-
-      <textarea
-        name="message"
-        placeholder="Tell us if you are a vet or pet owner"
-        className="w-full px-5 py-3 rounded-xl border border-gray-300"
-      />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
-
-      <button
-        type="submit"
-        disabled={state.submitting}
-        className="bg-[#2D5F5D] text-white py-3 rounded-xl font-semibold"
-      >
-        {state.submitting ? 'Sending…' : 'Send'}
-      </button>
-    </form>
-  );
-};
+type Language = 'es' | 'en' | 'pt';
 
 /* =========================
    APP
 ========================= */
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('es');
-  const t = translations[lang];
 
   useEffect(() => {
-    const l = navigator.language.startsWith('en') ? 'en' : 'es';
-    setLang(l);
+    const short = navigator.language.split('-')[0];
+    if (short === 'en' || short === 'pt') setLang(short as Language);
   }, []);
+
+  const t = translations[lang];
 
   return (
     <div className="min-h-screen bg-[#fdfdfd] text-gray-900">
+
       {/* HERO */}
-      <section className="py-24 text-center">
-        <h1 className="text-5xl font-bold">
+      <section className="relative py-24 text-center bg-gradient-to-br from-teal-50 via-white to-emerald-50">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4">
           {t.hero.title_1}{' '}
           <span className="text-[#2D5F5D]">{t.hero.title_highlight}</span>
         </h1>
-        <p className="mt-4 text-xl text-gray-600">{t.hero.subtitle}</p>
+        <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+          {t.hero.subtitle}
+        </iv>
       </section>
 
       <ProductModules />
       <SyncFlowSection t={t} />
       <InteractivePreviews />
 
-      {/* CTA = FORM */}
+      {/* CTA – FORM REAL (FORMPSREE CLÁSICO) */}
       <section
         id="cta-footer"
-        className="py-24 border-t flex justify-center"
+        className="py-24 border-t border-gray-100 bg-white"
       >
-        <ContactForm />
+        <div className="max-w-md mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Contact
+          </h2>
+
+          <form
+            action="https://formspree.io/f/xaqwlqoo"
+            method="POST"
+            className="space-y-4 text-left"
+          >
+            <label className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="you@email.com"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#2D5F5D] focus:outline-none"
+            />
+
+            <label className="block text-sm font-medium text-gray-700">
+              Message
+            </label>
+            <textarea
+              name="message"
+              placeholder="Tell us if you are a vet or a pet owner"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#2D5F5D] focus:outline-none"
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-[#2D5F5D] hover:bg-[#234948] text-white font-semibold py-3 rounded-xl transition"
+            >
+              Send
+            </button>
+          </form>
+        </div>
       </section>
 
-      <footer className="py-10 text-center text-sm text-gray-400">
+      {/* FOOTER */}
+      <footer className="py-12 text-center text-sm text-gray-500">
         © 2025 PetSync. {t.footer.rights}
       </footer>
     </div>
