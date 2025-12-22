@@ -5,15 +5,14 @@ import { ProductModules } from './components/ProductModules';
 import { InteractivePreviews } from './components/InteractivePreviews';
 
 /* =========================
-   TRANSLATIONS (SIN CTA LOGIC)
+   TRANSLATIONS
 ========================= */
 const translations = {
   es: {
     hero: {
       title_1: "Tu mascota, sus cosas,",
       title_highlight: "sin el desorden de siempre",
-      subtitle: "Plataforma integral de tutores y veterinarios",
-      cta: "Conocer más"
+      subtitle: "Plataforma integral de tutores y veterinarios"
     },
     footer: {
       rights: "Todos los derechos reservados."
@@ -23,8 +22,7 @@ const translations = {
     hero: {
       title_1: "Your pet, their stuff,",
       title_highlight: "without the usual mess",
-      subtitle: "Comprehensive platform for owners and vets",
-      cta: "Learn more"
+      subtitle: "Comprehensive platform for owners and vets"
     },
     footer: {
       rights: "All rights reserved."
@@ -34,8 +32,7 @@ const translations = {
     hero: {
       title_1: "Seu pet, as coisas dele,",
       title_highlight: "sem a bagunça de sempre",
-      subtitle: "Plataforma para tutores e veterinários",
-      cta: "Saiba mais"
+      subtitle: "Plataforma para tutores e veterinários"
     },
     footer: {
       rights: "Todos os direitos reservados."
@@ -45,9 +42,6 @@ const translations = {
 
 type Language = 'es' | 'en' | 'pt';
 
-/* =========================
-   APP
-========================= */
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('es');
 
@@ -62,21 +56,22 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-[#fdfdfd] text-gray-900">
 
       {/* HERO */}
-      <section className="relative py-24 text-center bg-gradient-to-br from-teal-50 via-white to-emerald-50">
+      <section className="py-24 text-center bg-gradient-to-br from-teal-50 via-white to-emerald-50">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4">
           {t.hero.title_1}{' '}
           <span className="text-[#2D5F5D]">{t.hero.title_highlight}</span>
         </h1>
+
         <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
           {t.hero.subtitle}
-        </iv>
+        </p>
       </section>
 
       <ProductModules />
       <SyncFlowSection t={t} />
       <InteractivePreviews />
 
-      {/* CTA – FORM REAL (FORMPSREE CLÁSICO) */}
+      {/* CTA – FORM REAL */}
       <section
         id="cta-footer"
         className="py-24 border-t border-gray-100 bg-white"
