@@ -519,9 +519,7 @@ const App: React.FC = () => {
                 <p className="text-base md:text-xl text-gray-500 leading-relaxed max-w-xl mx-auto">{t.cta.subtitle}</p>
               </div>
               
-              <div className="w-full max-w-md">
-                 <WaitlistForm t={t} />
-              </div>
+            <div className="w-full max-w-md"></div>
 
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">{t.cta.spam_notice}</p>
             </div>
